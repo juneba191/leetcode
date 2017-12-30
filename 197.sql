@@ -1,10 +1,8 @@
-SELECT
-    weather.id AS 'Id'
-FROM
-    weather
-        JOIN
-    weather w ON DATEDIFF(weather.date, w.date) = 1
-        AND weather.Temperature > w.Temperature
+# Write your MySQL query statement below
 
-# lembrar que no mysql tem q usar o dateDIFF
-#diferente do postgres        
+
+select w1.Id
+from Weather w1
+join Weather w2
+where DATEDIFF(w1.date, w2.date)  = 1 and w1.temperature > w2.temperature
+
